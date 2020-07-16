@@ -7,8 +7,7 @@ def key_for_min_value(name_hash)
   array_b = []
   
   if name_hash.any?
-    name_hash.each do |a, b|
-      array_a = a
+    array_a = name_hash.collect{|a, b| a}
   else
     NIL
   end
