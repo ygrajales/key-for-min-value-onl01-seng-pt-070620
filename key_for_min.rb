@@ -3,12 +3,15 @@
 
 def key_for_min_value(name_hash)
   
-  array_a = []
-  array_b = []
+  s_number = NIL
+  s_item = NIL
   
-  if name_hash.any?
-    array_a = name_hash.collect{|a, b| a}
-  else
-    NIL
-  end
+  name_hash.each do |item, number|
+    if s_number == nil || number < s_number
+      s_number = number
+      s_item = item
+    end
+    
+    s_item
+  
 end
